@@ -1,6 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
+  experimental: {
+    appDir: true,
+  },
+  eslint: {
+    dirs: ['src'],
+  },
+  webpack: (config) => {
+    config.externals.push('node-fetch');
+    return config;
+  },
 };
 
 export default nextConfig;
