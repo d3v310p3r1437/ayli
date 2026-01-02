@@ -1,6 +1,7 @@
+
 'use client';
 
-import { useState } from 'react';
+import { Suspense, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { Wifi, CheckCircle, XCircle, Copy, Check } from 'lucide-react';
 
@@ -14,7 +15,7 @@ const durationOptions = [
   { value: '168', label: '7 Days' },
 ];
 
-export default function AccessFormPage() {
+function AccessForm() {
   const searchParams = useSearchParams();
   const code = searchParams.get('code');
   const [duration, setDuration] = useState(durationOptions[0].value);
@@ -149,4 +150,17 @@ export default function AccessFormPage() {
       </div>
     </main>
   );
+}
+
+
+export default function AccessFormPage() {
+    return (
+        <Suspense fallback={
+            <div className="min-h-screen w-full bg-gradient-to-br from-gray-900 to-cyan-900 text-white flex items-center justify-center p-4 font-sans">
+                <div className="text-2xl font-bold text-cyan-300">Loading...</div>
+            </div>
+        }>
+            <AccessForm />
+        </Suspense>
+    )
 }
