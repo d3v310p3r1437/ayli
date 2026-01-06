@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 
 const plans = [
   { id: '30M', duration: '30 минут', price: '1000₮', color: { text: 'text-cyan-400', border: 'border-cyan-500', shadow: 'shadow-cyan-500/20', hoverBorder: 'hover:border-cyan-400' } },
@@ -81,9 +82,18 @@ export default function Home() {
   return (
     <main className='flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white p-4 sm:p-6 md:p-8'>
       <div className='w-full max-w-4xl'>
-        <h1 className='text-4xl md:text-5xl font-bold text-center mb-2 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600'>
-          Wi-Fi-аа сонгоно уу
-        </h1>
+        <div className="flex justify-center items-center mb-4">
+            <Image 
+                src="/ayli-logo.png" 
+                alt="Ayli Logo" 
+                width={300} 
+                height={300} 
+                className="drop-shadow-[0_5px_45px_rgba(236,72,153,0.35)] mr-6"
+            />
+            <h1 className='text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600'>
+              Интернэт аялал
+            </h1>
+        </div>
         <p className='text-center text-gray-400 mb-10'>Хүссэн багцаа сонгоод интернэтэд холбогдоорой.</p>
 
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10'>
