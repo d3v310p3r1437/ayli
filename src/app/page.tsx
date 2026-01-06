@@ -80,31 +80,31 @@ export default function Home() {
   };
 
   return (
-    <main className='flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white p-4 sm:p-6 md:p-8'>
+    <main className='flex flex-col items-center justify-center min-h-screen bg-emerald-950 text-white p-4 sm:p-6 md:p-8'>
       <div className='w-full max-w-4xl'>
-        <div className="flex justify-center items-center mb-4">
+        <div className="flex flex-row items-center justify-center mb-2">
             <Image 
                 src="/ayli-logo.png" 
                 alt="Ayli Logo" 
-                width={300} 
-                height={300} 
-                className="drop-shadow-[0_5px_45px_rgba(236,72,153,0.35)] mr-6"
+                width={220} 
+                height={220} 
+                className="drop-shadow-[0_5px_35px_rgba(192,132,252,0.35)] mr-6"
             />
             <h1 className='text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600'>
-              Интернэт аялал
+              Интернет аялал
             </h1>
         </div>
-        <p className='text-center text-gray-400 mb-10'>Хүссэн багцаа сонгоод интернэтэд холбогдоорой.</p>
+        <p className='text-center text-emerald-300 mb-10'>Хүссэн багцаа сонгоод интернэтэд холбогдоорой.</p>
 
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10'>
           {plans.map((plan) => (
             <div
               key={plan.id}
               onClick={() => setSelectedPlan(plan.id)}
-              className={`bg-gray-800 rounded-xl p-6 cursor-pointer border-2 transition-all duration-300 ${
+              className={`bg-emerald-900 rounded-xl p-6 cursor-pointer border-2 transition-all duration-300 ${
                 selectedPlan === plan.id
                   ? `${plan.color.border} ${plan.color.shadow}`
-                  : `border-gray-700 ${plan.color.hoverBorder}`
+                  : `border-emerald-800 ${plan.color.hoverBorder}`
               }`}>
               <h2 className='text-2xl font-semibold mb-2'>{plan.duration}</h2>
               <p className={`text-4xl font-bold ${plan.color.text}`}>{plan.price}</p>
@@ -114,10 +114,10 @@ export default function Home() {
           {/* Custom Hour Card */}
           <div
             onClick={() => setSelectedPlan('custom')}
-            className={`bg-gray-800 rounded-xl p-6 cursor-pointer border-2 transition-all duration-300 lg:col-span-3 ${
+            className={`bg-emerald-900 rounded-xl p-6 cursor-pointer border-2 transition-all duration-300 lg:col-span-3 ${
               selectedPlan === 'custom'
                 ? 'border-green-500 shadow-lg shadow-green-500/20'
-                : 'border-gray-700 hover:border-green-400'
+                : 'border-emerald-800 hover:border-green-400'
             }`}>
             <h2 className='text-2xl font-semibold mb-4'>Эсвэл өөрөө сонгох</h2>
             <div className='flex flex-col sm:flex-row items-center gap-4'>
@@ -125,12 +125,12 @@ export default function Home() {
                 type="number"
                 value={customHours}
                 onChange={handleCustomHourChange}
-                className='bg-gray-700 border-2 border-gray-600 rounded-lg p-3 w-full sm:w-32 text-center text-2xl font-bold focus:outline-none focus:border-green-500'
+                className='bg-emerald-800 border-2 border-emerald-700 rounded-lg p-3 w-full sm:w-32 text-center text-2xl font-bold focus:outline-none focus:border-green-500'
                 min="1"
               />
               <div className='flex items-baseline'>
                 <p className='text-4xl font-bold text-green-400'>{customPrice.toLocaleString()}₮</p>
-                <span className='text-gray-400 ml-2'>/ {customHours} цаг</span>
+                <span className='text-emerald-400 ml-2'>/ {customHours} цаг</span>
               </div>
             </div>
           </div>

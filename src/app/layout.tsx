@@ -7,6 +7,9 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'Ayli',
   description: 'Ayli Wi-Fi Access',
+  icons: {
+    icon: '/ayli-logo.png',
+  },
 };
 
 export default function RootLayout({
