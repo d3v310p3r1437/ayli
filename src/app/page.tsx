@@ -84,15 +84,15 @@ export default function Home() {
   return (
     <main className='flex flex-col items-center justify-center min-h-screen bg-slate-100 text-slate-800 p-4 sm:p-6 md:p-8'>
       <div className='w-full max-w-4xl'>
-        <div className="flex flex-row items-center justify-center mb-2">
+        <div className="flex flex-col sm:flex-row items-center justify-center mb-8 text-center sm:text-left">
             <Image 
                 src="/ayli-logo.png" 
                 alt="Ayli Logo" 
-                width={220} 
-                height={220} 
-                className="drop-shadow-[0_4px_15px_rgba(192,132,252,0.4)] mr-6"
+                width={180} 
+                height={180} 
+                className="drop-shadow-[0_4px_15px_rgba(192,132,252,0.4)] mb-4 sm:mb-0 sm:mr-6"
             />
-            <h1 className='text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500'>
+            <h1 className='text-4xl sm:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500'>
               Интернет аялал
             </h1>
         </div>
