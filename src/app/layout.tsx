@@ -8,9 +8,9 @@ export const metadata: Metadata = {
   title: 'Ayli',
   description: 'Ayli Wi-Fi Access',
   icons: {
-    icon: './ayli-logo.png',
-    shortcut: './ayli-logo.png',
-    apple: './ayli-logo.png',
+    icon: './favico.png',
+    shortcut: './favico.png',
+    apple: './favico.png',
   },
 };
 
